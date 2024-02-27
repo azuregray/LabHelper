@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="crudApp">
+    <head>
+        <title>AngularJS CRUD Application</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    </head>
+    <body ng-controller="crudController">
+        <h1>User Management</h1>
+        <form ng-submit="addUser()">
+            Name:
+            <input type="text" ng-model="name" required />
+            <br />
+            Age:
+            <input type="number" ng-model="age" required />
+            <br />
+            <button type="submit">Add User</button>
+        </form>
+        <br />
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in users">
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.age }}</td>
+                    <td>
+                        <button ng-click="editUser(user)">Edit</button>
+                        <button ng-click="deleteUser(user)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script>
+            var app = angular.module("crudApp", []);
+            app.controller("crudController", function ($scope) {
+                $scope.users = [
+                    { name: "Ram", age: 25 },
+                    { name: "Sam", age: 30 },
+                ];
+                $scope.addUser = function () {
+                    $scope.users.push({ name: $scope.name, age: $scope.age });
+                    $scope.name = "";
+                    $scope.age = "";
+                };
+                $scope.editUser = function (user) {
+                    var index = $scope.users.indexOf(user);
+                    var updatedName = prompt("Enter updated name:", user.name);
+                    var updatedAge = prompt("Enter updated age:", user.age);
+                    if (!(updatedName == null && updatedAge == null)) {
+                        var updatedUser = {
+                            name: updatedName,
+                            age: parseInt(updatedAge),
+                        };
+                        $scope.users.splice(index, 1, updatedUser);
+                    }
+                };
+                $scope.deleteUser = function (user) {
+                    var index = $scope.users.indexOf(user);
+                    $scope.users.splice(index, 1);
+                };
+            });
+        </script>
+    </body>
+</html>
