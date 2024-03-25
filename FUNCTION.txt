@@ -1,7 +1,7 @@
 function gcl{
 param(
 [parameter(madndatory=$true, position=0)]
-[string] $uri
+[string] $uri)
 (iwr -uri $uri).content | clip
 }
 
