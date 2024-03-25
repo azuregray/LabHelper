@@ -9,4 +9,7 @@ NOTE: You can write the whole function in a single line too!!
 
 gcl <UrlDirectToFile>
 
+URL IS AS FOLLOWS:
+https://raw.githubusercontent.com/azuregray/Personal/main/<FileName>
+
 remove-item function:\gcl
