@@ -1,0 +1,1 @@
+(iwr -uri <UrlDirectToFile>).content | clip

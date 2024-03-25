@@ -1,0 +1,10 @@
+function getclip{
+param(
+[parameter(madndatory=$true, position=0)]
+[string] $uri
+(iwr -uri $uri).content | clip
+}
+
+getclip <UrlDirectToFile>
+
+remove-item function:\getclip
