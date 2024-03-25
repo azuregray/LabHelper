@@ -1,1 +1,4 @@
 (iwr -uri <UrlDirectToFile>).content | clip
+
+URL IS AS FOLLOWS:
+https://raw.githubusercontent.com/azuregray/Personal/main/<FileName>
