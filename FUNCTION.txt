@@ -1,10 +1,10 @@
-function getclip{
+function gcl{
 param(
 [parameter(madndatory=$true, position=0)]
 [string] $uri
 (iwr -uri $uri).content | clip
 }
 
-getclip <UrlDirectToFile>
+gcl <UrlDirectToFile>
 
-remove-item function:\getclip
+remove-item function:\gcl
