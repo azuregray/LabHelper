@@ -5,6 +5,8 @@ param(
 (iwr -uri $uri).content | clip
 }
 
+NOTE: You can write the whole function in a single line too!!
+
 gcl <UrlDirectToFile>
 
 remove-item function:\gcl
