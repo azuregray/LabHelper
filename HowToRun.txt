@@ -1,0 +1,37 @@
+SIMPLE SINGLE COMMAND to download a Single File:
+(iwr -uri <UrlDirectToFile>).content | clip
+
+==================================================================================================
+FUNCTION TO SIMPLIFY THE COMMAND TO DOWNLOAD INDIVIDUAL FILES:
+
+:::: NOTE: You can write the whole function in a single line too..
+
+:: FUNCTION DEFINITION
+function gcl{
+param(
+[parameter(madndatory=$true, position=0)]
+[string] $uri)
+(iwr -uri $uri).content | clip
+}
+
+:: FUNCTION USAGE
+gcl <UrlDirectToFile>
+
+:: FUNCTION REMOVAL
+remove-item function:\gcl
+
+==================================================================================================
+Simplify REPEATED COMMANDS to loop through a range using FOREACH loop:
+
+:::: SYNTAX >>>    rangeSTART.....rangeEND | foreach { command_with_($)sign_at_loopingPosition }    <<<
+
+:: For program{1->12}.html
+1..12 | foreach {iwr -uri https://raw.githubusercontent.com/azuregray/Personal/main/program$($_).html -outfile program$($_).html}
+
+:: For q5{1->5}.txt
+1..5 | foreach {iwr -uri https://raw.githubusercontent.com/azuregray/Personal/main/q5$($_).txt -outfile q5$($_).txt}
+
+==================================================================================================
+
+UriDirectToFile IS AS FOLLOWS:
+https://raw.githubusercontent.com/azuregray/Personal/main/<FileName>
