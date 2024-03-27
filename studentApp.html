@@ -1,0 +1,50 @@
+<html ng-app="studentApp">
+    <head>
+        <title>Angular JS Student Details</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    </head>
+    <body ng-controller="studentController">
+        <h2>Student Details</h2>
+        <label for="numberOfStudents">Enter the number of Students:</label>
+        <input
+            type="number"
+            id="numberOfStudents"
+            ng-model="numberOfStudents"
+        />
+        <button ng-click="displayStudentDetails()">
+            Display Student Details
+        </button>
+        <div ng-show="studentDetails.length > 0 ">
+            <p>Total Student :</p>
+            <table>
+                <tr>
+                    <th>Student Name</th>
+                    <th>CGPA</th>
+                </tr>
+                <tr ng-repeat="student in studentDetails">
+                    <td>{{student.name}}</td>
+                    <td>{{student.cgpa}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            var app = angular.module("studentApp", []);
+            app.controller("studentController", function ($scope) {
+                $scope.studentDetails = [];
+                $scope.displayStudentDetails = function () {
+                    $scope.studentDetails = [];
+                    for (var i = 0; i < $scope.numberOfStudents; i++) {
+                        var student = {
+                            name: prompt("Enter the name of Student" + (i + 1)),
+                            cgpa: parseFloat(
+                                prompt("Enter the CGPA of Student" + (i + 1))
+                            ),
+                        };
+                        $scope.studentDetails.push(student);
+                    }
+                };
+            });
+        </script>
+    </body>
+</html>
