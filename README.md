@@ -43,15 +43,15 @@ param(
 
 ##### Examples: 
 - For program{1->12}.html
-> PS >> 1..12 | foreach {iwr -uri https://raw.githubusercontent.com/azuregray/Personal/main/program$($_).html -outfile program$($_).html}
+> PS >> 1..12 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/program$($_).html -outfile program$($_).html}
 
 - For q5{1->5}.txt
-> PS >> 1..5 | foreach {iwr -uri https://raw.githubusercontent.com/azuregray/Personal/main/q5$($_).txt -outfile q5$($_).txt}
+> PS >> 1..5 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/q5$($_).txt -outfile q5$($_).txt}
 
 ---
 UriDirectToFile for this repo is as follows:
 
-: > https://raw.githubusercontent.com/azuregray/Personal/main/FileName/
+: > https​://raw.githubusercontent.com/azuregray/Personal/main/FileName/
 
 ---
 
