@@ -46,11 +46,11 @@ remove-item function:\gcl
 > rangeSTART.....rangeEND | foreach { command_with_($)sign_at_loopingPosition }
 
 ##### Examples: 
-- For program{1->12}.html
+- For fetching program1.html >> program12.html:
 ```
 1..12 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/program$($_).html -outfile program$($_).html}
 ```
-- For q5{1->5}.txt
+- For fetching q51.txt >> q55.txt:
 ```
 1..5 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/q5$($_).txt -outfile q5$($_).txt}
 ```
