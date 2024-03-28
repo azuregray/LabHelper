@@ -1,6 +1,6 @@
 # **P R I V A T E &emsp; R E P O S I T O R Y**
 
-### *Repository For Personal Uses*.
+## *Repository For Personal Uses*.
 
 > Author: **Darshan S**
 
