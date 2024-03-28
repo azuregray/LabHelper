@@ -11,7 +11,7 @@
 
 ---
 ### A simple single command to download a Single File:
-> PS >> (iwr -uri *UrlDirectToFile* ).content | clip
+> (iwr -uri *UrlDirectToFile* ).content | clip
 
 ---
 ### Function to simplify the command for multiple uses:
@@ -29,10 +29,10 @@ param(
 ```
 
 - **Usage:**
-> PS >> gcl UrlDirectToFile
+> gcl UrlDirectToFile
 
 - **Undefine the function:**
-> PS >> remove-item function:\gcl
+> remove-item function:\gcl
 
 ---
 ### Simplify repeated command to loop through a range using FOREACH loop:
@@ -43,10 +43,10 @@ param(
 
 ##### Examples: 
 - For program{1->12}.html
-> PS >> 1..12 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/program$($_).html -outfile program$($_).html}
+>  1..12 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/program$($_).html -outfile program$($_).html}
 
 - For q5{1->5}.txt
-> PS >> 1..5 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/q5$($_).txt -outfile q5$($_).txt}
+>  1..5 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/q5$($_).txt -outfile q5$($_).txt}
 
 ---
 UriDirectToFile for this repo is as follows:
