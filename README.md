@@ -39,19 +39,19 @@ param(
 
 ##### FOREACH LOOP SYNTAX
 
-> rangeSTART.....rangeEND | foreach { command_with_($)sign_at_loopingPosition }    <<<
+> `rangeSTART.....rangeEND | foreach { command_with_($)sign_at_loopingPosition } `
 
 ##### Examples: 
 - For program{1->12}.html
->  1..12 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/program$($_).html -outfile program$($_).html}
+> ` 1..12 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/program$($_).html -outfile program$($_).html}`
 
 - For q5{1->5}.txt
->  1..5 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/q5$($_).txt -outfile q5$($_).txt}
+> ` 1..5 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/q5$($_).txt -outfile q5$($_).txt}`
 
 ---
 UriDirectToFile for this repo is as follows:
 
-: > https​://raw.githubusercontent.com/azuregray/Personal/main/FileName/
+: > `https​://raw.githubusercontent.com/azuregray/Personal/main/FileName/`
 
 ---
 
