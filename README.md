@@ -1,4 +1,4 @@
-# $\ P R I V A T E &emsp; R E P O S I T O R Y $
+# **P R I V A T E &emsp; R E P O S I T O R Y**
 
 ### This repository is intended for my personal use ONLY.
 
