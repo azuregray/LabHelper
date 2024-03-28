@@ -8,7 +8,7 @@
 ## *Repository For Personal Uses*.
 #### *This repository is for personal use so please do not contact me if any of you have problems regarding anything here.*
 
-> I intend to use **Powershell** as the command interpreter as it is the new default in windows machines now and ofcourse there are windows machines everywhere.
+> I choose to use **Powershell** as the command interpreter as it is the new default in windows machines now and ofcourse there are windows machines everywhere.
 
 ---
 ### A simple single command to download a Single File:
