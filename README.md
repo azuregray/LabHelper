@@ -55,9 +55,9 @@ remove-item function:\gcl
 1..5 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/q5$($_).txt -outfile q5$($_).txt}
 ```
 ---
-UriDirectToFile for this repo is as follows:
+*UriDirectToFile* for this repo is as follows:
 
-: > https​://raw.githubusercontent.com/azuregray/Personal/main/ ==FileName== 
+> https​://raw.githubusercontent.com/azuregray/Personal/main/ ==FileName== 
 
 ---
 
