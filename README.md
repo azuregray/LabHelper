@@ -17,14 +17,15 @@
 ### Function to simplify the command for multiple uses:
 > _NOTE: You can write the whole function in a single line too.._
 
-- **Function Definition**:
-
-> function gcl{
-> param(
-> [parameter(madndatory=$true, position=0)]
-> [string] $uri)
-> (iwr -uri $uri).content | clip
-> }
+- **Function Definition:**
+```
+function gcl{
+param(
+[parameter(madndatory=$true, position=0)]
+[string] $uri)
+(iwr -uri $uri).content | clip
+}
+```
 
 - **Usage:**
 > `gcl UrlDirectToFile`
