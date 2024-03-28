@@ -5,7 +5,7 @@
 > My Identity >>  [Github](https://github.com/azuregray/) | [LinkedIn](https://linkedin.com/in/arcticblue/) | [Instagram](https://instagram.com/thedarshgowda/) | [YouTube](https://www.youtube.com/@thedarshgowda/) | [Email](mailto:d7gowda@gmail.com)
 
 
-## *Repository For My Own Personal Uses*.
+### *Repository For My Own Personal Uses*.
 #### *This repository is for my personal use so please Do Not Contact Me for anything here.*
 
 > I choose to use **Powershell** as the command interpreter as it is the new default in windows machines now and ofcourse there are windows machines everywhere.
