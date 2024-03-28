@@ -11,12 +11,12 @@
 > I choose to use **Powershell** as the command interpreter as it is the new default in windows machines now and ofcourse there are windows machines everywhere.
 
 ---
-### A Single File needs a *Single Command*:
+### Single File needs a *Single Command*:
 ```
 (iwr -uri *UrlDirectToFile* ).content | clip
 ```
 ---
-### Multiple Files simplified by *Function*:
+### Multiple Files simplified by a *Function*:
 > _NOTE: You can write the whole function in a single line too.._
 
 - **Function Definition as a BLOCK:**
