@@ -11,15 +11,15 @@
 > I choose to use **Powershell** as the command interpreter as it is the new default in windows machines now and ofcourse there are windows machines everywhere.
 
 ---
-### A simple single command to download a Single File:
+### A Single File needs a *Single Command*:
 ```
 (iwr -uri *UrlDirectToFile* ).content | clip
 ```
 ---
-### Function to simplify the command for multiple uses:
+### Multiple Files simplified by *Function*:
 > _NOTE: You can write the whole function in a single line too.._
 
-- **Function Definition as a block:**
+- **Function Definition as a BLOCK:**
 ```
 function gcl{
 param(
@@ -28,7 +28,7 @@ param(
 (iwr -uri $uri).content | clip
 }
 ```
-- **Function definition in a single line:**
+- **Function definition as INLINE:**
 ```
 function gcl{ param([parameter(mandatory=$true, position=0)] [string] $uri) (iwr -uri $uri).content | clip }
 ```
@@ -43,7 +43,7 @@ gcl UrlDirectToFile
 remove-item function:\gcl
 ```
 ---
-### Simplify repeated command to loop through a range using FOREACH loop:
+### Repeated Fetching easier with _ForEach_ loop:
 
 ##### FOREACH LOOP SYNTAX
 
@@ -54,7 +54,7 @@ remove-item function:\gcl
 ```
 1..12 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/program$($_).html -outfile program$($_).html}
 ```
-- For fetching _q51.txt_ >> _q55.txt_:
+- For fetching _q51.txt_ <span>>></span> _q55.txt_:
 ```
 1..5 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/q5$($_).txt -outfile q5$($_).txt}
 ```
