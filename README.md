@@ -54,7 +54,7 @@ remove-item function:\gcl
 ```
 1..12 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/program$($_).html -outfile program$($_).html}
 ```
-- For fetching _q51.txt_ <span>>></span> _q55.txt_:
+- For fetching _q51.txt_ >> _q55.txt_:
 ```
 1..5 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/q5$($_).txt -outfile q5$($_).txt}
 ```
