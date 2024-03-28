@@ -7,7 +7,6 @@
 
 ## *Repository For My Own Personal Uses*.
 #### *This repository is for my personal use so please Do Not Contact Me for anything here.*
-#### *I do not recommend you to try it.*
 
 > I choose to use **Powershell** as the command interpreter as it is the new default in windows machines now and ofcourse there are windows machines everywhere.
 
@@ -31,7 +30,7 @@ param(
 ```
 - **Function definition in a single line:**
 ```
-function gcl{ param( [parameter(mandatory=$true, position=0)] [string] $uri) (iwr -uri $uri).content | clip }
+function gcl{ param([parameter(mandatory=$true, position=0)] [string] $uri) (iwr -uri $uri).content | clip }
 ```
 
 - **Usage:**
@@ -51,16 +50,16 @@ remove-item function:\gcl
 > rangeSTART.....rangeEND | foreach { command_with_($)sign_at_loopingPosition }
 
 ##### Examples: 
-- For fetching program1.html >> program12.html:
+- For fetching _program1.html_ >> _program12.html_:
 ```
 1..12 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/program$($_).html -outfile program$($_).html}
 ```
-- For fetching q51.txt >> q55.txt:
+- For fetching _q51.txt_ >> _q55.txt_:
 ```
 1..5 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/q5$($_).txt -outfile q5$($_).txt}
 ```
 ---
-#### _**UriDirectToFile**_ for this repo is as follows:
+ _**UriDirectToFile**_ for this repo is as follows:
 
 > https​://raw.githubusercontent.com/azuregray/Personal/main/<span><</span>FileName<span>></span>
 
