@@ -19,6 +19,7 @@
 _NOTE: You can write the whole function in a single line too.._
 
 - **Function Definition**:
+>
 ```
 function gcl{
 param(
@@ -27,12 +28,12 @@ param(
 (iwr -uri $uri).content | clip
 }
 ```
-
+>
 - **Usage:**
-> gcl UrlDirectToFile
+> `gcl UrlDirectToFile`
 
 - **Undefine the function:**
-> remove-item function:\gcl
+> `remove-item function:\gcl`
 
 ---
 ### Simplify repeated command to loop through a range using FOREACH loop:
