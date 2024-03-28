@@ -23,7 +23,7 @@
 ```
 function gcl{
 param(
-[parameter(madndatory=$true, position=0)]
+[parameter(mandatory=$true, position=0)]
 [string] $uri)
 (iwr -uri $uri).content | clip
 }
