@@ -12,7 +12,7 @@
 
 ---
 ### A simple single command to download a Single File:
-> `(iwr -uri *UrlDirectToFile* ).content | clip`
+`(iwr -uri *UrlDirectToFile* ).content | clip`
 
 ---
 ### Function to simplify the command for multiple uses:
