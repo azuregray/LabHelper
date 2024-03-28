@@ -11,24 +11,21 @@
 
 ---
 ### A simple single command to download a Single File:
-> (iwr -uri *UrlDirectToFile* ).content | clip
+> `(iwr -uri *UrlDirectToFile* ).content | clip`
 
 ---
 ### Function to simplify the command for multiple uses:
-
-_NOTE: You can write the whole function in a single line too.._
+> _NOTE: You can write the whole function in a single line too.._
 
 - **Function Definition**:
->
-```
-function gcl{
-param(
-[parameter(madndatory=$true, position=0)]
-[string] $uri)
-(iwr -uri $uri).content | clip
-}
-```
->
+
+> function gcl{
+> param(
+> [parameter(madndatory=$true, position=0)]
+> [string] $uri)
+> (iwr -uri $uri).content | clip
+> }
+
 - **Usage:**
 > `gcl UrlDirectToFile`
 
