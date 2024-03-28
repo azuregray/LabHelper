@@ -5,8 +5,9 @@
 > My Identity >>  [Github](https://github.com/azuregray/) | [LinkedIn](https://linkedin.com/in/arcticblue/) | [Instagram](https://instagram.com/thedarshgowda/) | [YouTube](https://www.youtube.com/@thedarshgowda/) | [Email](mailto:d7gowda@gmail.com)
 
 
-## *Repository For Personal Uses*.
-#### *This repository is for personal use so please do not contact me if any of you have problems regarding anything here.*
+## *Repository For My Own Personal Uses*.
+#### *This repository is for my personal use so please Do Not Contact Me for anything here.*
+#### *I do not recommend you to try it.*
 
 > I choose to use **Powershell** as the command interpreter as it is the new default in windows machines now and ofcourse there are windows machines everywhere.
 
@@ -19,7 +20,7 @@
 ### Function to simplify the command for multiple uses:
 > _NOTE: You can write the whole function in a single line too.._
 
-- **Function Definition:**
+- **Function Definition as a block:**
 ```
 function gcl{
 param(
@@ -27,6 +28,10 @@ param(
 [string] $uri)
 (iwr -uri $uri).content | clip
 }
+```
+- **Function definition in a single line:**
+```
+function gcl{ param( [parameter(mandatory=$true, position=0)] [string] $uri) (iwr -uri $uri).content | clip }
 ```
 
 - **Usage:**
@@ -55,7 +60,7 @@ remove-item function:\gcl
 1..5 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/q5$($_).txt -outfile q5$($_).txt}
 ```
 ---
-*UriDirectToFile* for this repo is as follows:
+#### _**UriDirectToFile**_ for this repo is as follows:
 
 > https​://raw.githubusercontent.com/azuregray/Personal/main/<span><</span>FileName<span>></span>
 
