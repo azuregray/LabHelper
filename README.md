@@ -1,11 +1,11 @@
 # **P R I V A T E &emsp; R E P O S I T O R Y**
 
-## *Repository For Personal Uses*.
-
 > Author: **Darshan S**
 
 > My Identity >>  [Github](https://github.com/azuregray/) | [LinkedIn](https://linkedin.com/in/arcticblue/) | [Instagram](https://instagram.com/thedarshgowda/) | [YouTube](https://www.youtube.com/@thedarshgowda/) | [Email](mailto:d7gowda@gmail.com)
 
+
+## *Repository For Personal Uses*.
 #### *This repository is for personal use so please do not contact me if any of you have problems regarding anything here.*
 
 > I intend to use **Powershell** as the command interpreter as it is the new default in windows machines now and ofcourse there are windows machines everywhere.
