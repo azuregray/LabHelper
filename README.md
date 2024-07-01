@@ -8,7 +8,7 @@
 ### *Repository For My Own Personal Uses*.
 #### *This repository is for my personal use so please Do Not Contact Me for anything here.*
 
-> I have choosen to use **POWERSHELL** as the command interpreter as it is the new default in windows machines now and ofcourse there are windows machines everywhere.
+> I have chosen to use **POWERSHELL** as the command interpreter as it is the new default in windows machines now and ofcourse there are windows machines everywhere.
 
 ---
 ### Single File needs a *Single Command*:
