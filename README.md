@@ -11,6 +11,8 @@
 > I have chosen to use **POWERSHELL** as the command interpreter as it is the new default in windows machines now and ofcourse there are windows machines everywhere.
 
 ---
+## **U S A G E**
+---
 ### Single File needs a *Single Command*:
 ```
 (iwr -uri *UrlDirectToFile* ).content | clip
