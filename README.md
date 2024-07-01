@@ -1,4 +1,4 @@
-# **P R I V A T E &emsp; R E P O S I T O R Y**
+# **P E R S O N A L &emsp; R E P O S I T O R Y**
 
 > Author: **Darshan S**
 
