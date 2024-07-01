@@ -12,7 +12,7 @@
 
 ---
 ## **U S A G E**
----
+
 ### Single File needs a *Single Command*:
 ```
 (iwr -uri *UrlDirectToFile* ).content | clip
@@ -35,7 +35,7 @@ param(
 function gcl{ param([parameter(mandatory=$true, position=0)] [string] $uri) (iwr -uri $uri).content | clip }
 ```
 
-- **Usage:**
+- **Usage of Inline Function:**
 ```
 gcl UrlDirectToFile
 ```
