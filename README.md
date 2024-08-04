@@ -12,6 +12,8 @@
 
 > PS: I now feel the need for Linux Implementation too as my university switched to Linux. So revising the repo.
 
+> TESTED OK
+
 ---
 ## **U S A G E**
 
