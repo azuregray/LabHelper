@@ -70,7 +70,7 @@ remove-item function:\gcl
 ### Simplest on Linux:
 - For fetching a single file:
   ```
-  curl -s https​://raw.githubusercontent.com/azuregray/LabHelper/main/fileName.py | xclip -selection clipboard
+  curl -s *UrlDirectToFile* | xclip -selection clipboard
   ```
 
 ---
