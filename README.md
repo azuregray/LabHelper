@@ -24,7 +24,7 @@
 (iwr -uri *UrlDirectToFile* ).content | clip
 ```
 ---
-### Multiple Files simplified by a *Function*:
+### Multiple Files simplified by a _Function_:
 > _NOTE: You can write the whole function in a single line too.._
 
 - **Function Definition as a BLOCK:**
@@ -36,7 +36,7 @@ param(
 (iwr -uri $uri).content | clip
 }
 ```
-- **Function definition as INLINE:**
+- **Function definition _InLine_:**
 ```
 function gcl{ param([parameter(mandatory=$true, position=0)] [string] $uri) (iwr -uri $uri).content | clip }
 ```
