@@ -1,4 +1,4 @@
-# **R E P O &emsp; F O R &emsp; L A B &emsp; R E M O T E &emsp; A C C E S S**
+# **L A B &emsp; R E M O T E &emsp; A C C E S S**
 
 > Author: **Darshan S**
 
