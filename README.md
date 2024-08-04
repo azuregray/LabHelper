@@ -1,6 +1,6 @@
 # **L A B &emsp; R E M O T E &emsp; A C C E S S**
 
-> Author: **Darshan S**
+> Author: **D A R S H A N &ensp; S**
 
 > My Identity >>  [Github](https://github.com/azuregray/) | [LinkedIn](https://linkedin.com/in/arcticblue/) | [Instagram](https://instagram.com/thedarshgowda/) | [YouTube](https://www.youtube.com/@pantoneblue/) | [Telegram](https://t.me/adobegreen/) | [Mail](mailto:d7gowda@gmail.com)
 
