@@ -10,8 +10,12 @@
 
 > I have chosen to use **POWERSHELL** as the command interpreter as it is the new default in windows machines now and ofcourse there are windows machines everywhere.
 
+> PS: I now feel the need for Linux Implementation too as my university switched to Linux. So revising the repo.
+
 ---
 ## **U S A G E**
+
+## **W I N D O W S**
 
 ### Single File needs a *Single Command*:
 ```
@@ -54,16 +58,25 @@ remove-item function:\gcl
 ##### Examples: 
 - For fetching _program1.html_ >> _program12.html_:
 ```
-1..12 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/program$($_).html -outfile program$($_).html}
+1..12 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/LabHelper/main/program$($_).html -outfile program$($_).html}
 ```
 - For fetching _q51.txt_ >> _q55.txt_:
 ```
-1..5 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/Personal/main/q5$($_).txt -outfile q5$($_).txt}
+1..5 | foreach {iwr -uri https​://raw.githubusercontent.com/azuregray/LabHelper/main/q5$($_).txt -outfile q5$($_).txt}
 ```
+
+## **L I N U  X**
+
+### Simplest on Linux:
+- For fetching a single file:
+  ```
+  wget https​://raw.githubusercontent.com/azuregray/LabHelper/main/<span><</span>fileName.py<span>></span>
+  ```
+
 ---
  _**UriDirectToFile**_ for this repo is as follows:
 
-> https​://raw.githubusercontent.com/azuregray/Personal/main/<span><</span>FileName<span>></span>
+> https​://raw.githubusercontent.com/azuregray/LabHelper/main/<span><</span>FileName<span>></span>
 
 ---
 
