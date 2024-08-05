@@ -15,7 +15,6 @@ print('\n Attributes and datatypes')
 print(heartDisease.dtypes)
 
 model = BayesianModel([('age', 'heartdisease'), ('sex', 'heartdisease'), ('exang', 'heartdisease'), ('cp', 'heartdisease'), ('heartdisease', 'restecg'), ('heartdisease', 'chol')])
-
 print('\n Learning CPD using Maximum likelihood estimators')
 model.fit(heartDisease, estimator=MaximumLikelihoodEstimator)
 

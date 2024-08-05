@@ -15,10 +15,13 @@ def radial_kernel(x0, X, tau):
 n = 1000
 X = np.linspace(-3, 3, num=n)
 print("The Data Set (10 Samples) X:\n", X[1:10])
+
 Y = np.log(np.abs(X ** 2 - 1) + .5)
 print("The Fitting Curve Data Set (10 Samples) Y:\n", Y[1:10])
+
 X += np.random.normal(scale=.1, size=n)
 print("Normalized (10 Samples) X:\n", X[1:10])
+
 domain = np.linspace(-3, 3, num=300)
 print("Xo Domain Space (10 Samples):\n", domain[1:10])
 

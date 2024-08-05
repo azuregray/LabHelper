@@ -41,6 +41,7 @@ def plot_decision_boundaries(X, y, model, ax):
     ax.set_title('SVM Decision Boundary')
 
 fig, ax = plt.subplots()
+
 plot_decision_boundaries(X_train, y_train, svm_model, ax)
 plt.show()
 

@@ -1,3 +1,4 @@
+#p7
 import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn.cluster import KMeans

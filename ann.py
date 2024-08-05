@@ -1,3 +1,4 @@
+#p4
 import numpy as np
 
 X = np.array(([2, 9], [1, 5], [3, 6]), dtype=float)

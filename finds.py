@@ -1,3 +1,4 @@
+#p1
 import csv
 
 a = []
@@ -24,4 +25,4 @@ for i in range(len(a)):
                 hypothesis[j] = '?'
         print("\nThe hypothesis for the training instance {} is: \n".format(i + 1), hypothesis)
 
-print("\nThe Maximally specific hypothesis for the training instance is")
+print("\nThe Maximally specific hypothesis for the training instance is: ", hypothesis)
