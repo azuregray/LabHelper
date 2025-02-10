@@ -1,18 +1,18 @@
 # **L A B &emsp; R E M O T E &emsp; A C C E S S**
 
-> Author: **D A R S H A N &ensp; S**
+> Author :: **`D A R S H A N  S (GitHub/azuregray)`**
 
-> My Identity >>  [Github](https://github.com/azuregray/) | [LinkedIn](https://linkedin.com/in/arcticblue/) | [Instagram](https://instagram.com/thedarshgowda/) | [YouTube](https://www.youtube.com/@pantoneblack/) | [Telegram](https://t.me/adobegreen/) | [Mail](mailto:d7gowda@gmail.com)
+> My Identity >>  [**`Github`**](https://github.com/azuregray/)
 
 
-### *Repository For My Own Personal Uses*.
-#### *This repository is for my personal use so please Do Not Contact Me for anything here.*
+### *`LAB HELPER` - A remote access hub that can be used to easily access your desired data files.*
+#### *Welcome to Engineering!*
 
-> I have chosen to use **POWERSHELL** as the command interpreter as it is the new default in windows machines now and ofcourse there are windows machines everywhere.
+> **`SPECIAL NOTE FROM AUTHOR`** :: I am turning this repo into a Public Archive as I deem that no further changes are required for the repository.
+> Please continue reading to know how this repo might be of great help for you.
 
-> PS: I now feel the need for Linux Implementation too as my university switched to Linux. So revising the repo.
 
-> TESTED OK
+> Oh wait!! There are no files in the repo other than a README! Yes, ofcourse. Feel free to fork this repo to your own GitHub account and then populate it with files in the root folder itself so that you won't need to type longer commands 😉  
 
 ---
 ## **U S A G E**
@@ -75,10 +75,24 @@ remove-item function:\gcl
   curl -s *UrlDirectToFile* | xclip -selection clipboard
   ```
 
+- For fetching multiple files, use a loop:
+  Let's say _program1.html_ >> _program5.html_:
+  ```
+  numbers=(1 2 3 4 5); for i in "${numbers[@]}"; do curl -s https​://raw.githubusercontent.com/azuregray/LabHelper/main/program${i}.html; done | xclip -selection clipboard
+  ```
+  or perhaps, _q51.txt_ >> _q56.txt_:
+  ```
+  numbers=(1 2 3 4 5); for i in "${numbers[@]}"; do curl -s https​://raw.githubusercontent.com/azuregray/LabHelper/main/q5${i}.txt; done | xclip -selection clipboard
+  ```
+
 ---
- _**UriDirectToFile**_ for this repo is as follows:
+### _**UriDirectToFile**_ for your repo after forking might look something like:
+
+> https​://raw.githubusercontent.com/<span><</span>GithubUsername<span>></span>/LabHelper/main/<span><</span>FileName<span>></span>
+
+---
+ ### _**UriDirectToFile**_ for me for this repo is as follows:
 
 > https​://raw.githubusercontent.com/azuregray/LabHelper/main/<span><</span>FileName<span>></span>
 
 ---
-
