@@ -8,11 +8,11 @@
 ### *`LAB HELPER` - A remote access hub that can be used to easily access your desired data files.*
 #### *Welcome to Engineering!*
 
-> **`SPECIAL NOTE FROM AUTHOR`** :: I am turning this repo into a Public Archive as I deem that no further changes are required for the repository.
-> Please continue reading to know how this repo might be of great help for you.
+> **`SPECIAL NOTE FROM AUTHOR`** :: I am turning this repo into a Public Archive as I deem that no further changes are required for the repository. Please continue reading to know how this repo might be of great help for you.  
 
 
-> Oh wait!! There are no files in the repo other than a README! Yes, ofcourse. Feel free to fork this repo to your own GitHub account and then populate it with files in the root folder itself so that you won't need to type longer commands 😉  
+> Oh wait!! There are no files in the repo other than a README! Yes, ofcourse.  
+> Feel free to fork this repo to your own GitHub account and then populate it with files in the root folder itself so that you won't need to type longer commands 😉  
 
 ---
 ## **U S A G E**
