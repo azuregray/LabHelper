@@ -1,1 +1,0 @@
-INSRET INTO BOOK_COPIES (`NO_OF_COPIES`, `BOOK_ID`, `PROGRAMME_ID`) VALUES (10, 1, 10), (5, 1, 11), (2, 2, 12), (5, 2, 13), (7, 3, 14), (1, 5, 10), (3, 4, 11);
