@@ -1,0 +1,38 @@
+Step 1: Ensure MongoDB is Running
+Start MongoDB server if it is not running: mongod
+
+Step 2: Connect to MongoDB
+Open a new terminal and start the MongoDB shell: mongosh
+
+Step 3: Drop Existing Collection
+In the MongoDB shell, switch to the usermanaged database and drop the
+transactions collection:
+
+use usermanaged
+db.transactions.drop()
+
+Step 4: Bulk Load Data from transactions.json
+Use mongoimport to import data from transactions.json :
+
+mongoimport --db usermanaged --collection transactions --file transactions.json --jsonArray
+
+ Create a JSON file named transactions.json with the following content:
+[
+ { "transaction_id": 1, "amount": 100, "type": "credit", "date": "2024-01-01" },
+ { "transaction_id": 2, "amount": 200, "type": "debit", "date": "2024-01-02" },
+ { "transaction_id": 3, "amount": 150, "type": "credit", "date": "2024-01-03" }
+]
+
+ Navigate to the Directory:
+Navigate to the directory where your transactions.json file is located:
+cd papath/to/your/json/fileth/to/your/json/file
+
+• Run the mongoimport Command to import the data from transactions.json
+into the usermanaged database and the transactions collection:
+
+mongoimport --db usermanaged --collection transactions --file transactions.json --jsonArray
+
+Step 5: Upsert Data from transactions_upsert.json Use mongoimport with the --
+mode upsert option to upsert data from transactions_upsert.json:
+
+mongoimport --db usermanaged --collection transactions --file transactions_upsert.json --mode upsert --jsonArray

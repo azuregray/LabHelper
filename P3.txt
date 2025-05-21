@@ -1,0 +1,94 @@
+3a
+
+Create app.js
+
+Create a file named app.js and add the following code:
+// Import the Express module
+const express = require('express');
+ // Create an instance of an Express application
+const app = express();
+// Define the port number the server will listen on
+const port = 3000;
+// Middleware to parse cookies from the request headers
+app.use((req, res, next) => {
+ // Get the 'Cookie' header from the request
+ const cookies = req.headers.cookie;
+ // Parse the cookies and attach them to the req object
+ if (cookies) {
+ req.parsedCookies = parseCookies(cookies);
+ } else {
+ req.parsedCookies = {};
+ }
+ // Call next() to pass control to the next middleware or route handler
+ next();
+});
+// Function to parse cookies
+function parseCookies(cookies) {
+ const parsedCookies = {};
+
+ // Split the cookie string into individual cookies
+ cookies.split(';').forEach(cookie => {
+ const parts = cookie.split('=');
+
+ // Trim whitespace and assign to parsedCookies object
+ parsedCookies[parts[0].trim()] = (parts[1] || '').trim();
+ });
+ return parsedCookies;
+}
+// Define a route to check for cookies
+app.get('/', (req, res) => {
+ // Respond with the parsed cookies as a JSON string
+ res.send(`Cookies: ${JSON.stringify(req.parsedCookies)}`);
+});
+// Start the server and listen on the specified port
+app.listen(port, () => {
+ console.log(`Server is running on http://localhost:${port}`);
+});
+
+Running the Application
+
+1. Save the app.js File.
+2. Start the Server:
+node app.js
+3. Test the Application:
+o Open your browser and navigate to http://localhost:3000.
+o If you have set cookies in your browser, you will see them displayed as a
+JSON string in the response
+
+
+3b
+
+const car = {
+ make: 'Toyota',
+ model: 'Camry',
+ year: 2020,
+ color: 'Blue'
+};
+// Function to print the properties of the car object
+function printCarProperties(car) {
+ console.log('Car properties:');
+ for (const key in car) {
+ console.log(`${key}: ${car[key]}`);
+ }
+}
+// Function to delete the second property of the car object
+function deleteSecondProperty(car) {
+ const keys = Object.keys(car);
+ if (keys.length > 1) {
+ delete car[keys[1]];
+ }
+}
+// Function to get the length of the car object
+function getObjectLength(car) {
+ return Object.keys(car).length;
+}
+// Print the properties of the car object
+printCarProperties(car);
+// Delete the second property
+deleteSecondProperty(car);
+// Print the properties of the car object after deletion
+console.log('\nCar properties after deleting the second property:');
+printCarProperties(car);
+// Get and print the length of the car object
+const length = getObjectLength(car);
+console.log(`\nLength of the car object: ${length}`);

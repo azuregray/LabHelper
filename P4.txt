@@ -1,0 +1,142 @@
+4a
+
+const { MongoClient } = require('mongodb');
+const readlineSync = require('readline-sync');
+// MongoDB connection URI and database name
+const uri = 'mongodb://localhost:27017';
+const dbName = 'studentDB';
+const collectionName = 'students';
+// Function to read student data from the user
+function readStudentData() {
+ const usn = readlineSync.question('Enter USN: ');
+ const name = readlineSync.question('Enter Name: ');
+ const sem = readlineSync.question('Enter Semester: ');
+ const yearOfAdmission = readlineSync.question('Enter Year of Admission: ');
+ return { usn, name, sem, yearOfAdmission };
+}
+// Function to insert student data into MongoDB
+async function insertStudentData(client, studentData) {
+ const db = client.db(dbName);
+ const collection = db.collection(collectionName);
+ const result = await collection.insertOne(studentData);
+ console.log(`New student inserted with ID: ${result.insertedId}`);
+}
+async function main() {
+ const client = new MongoClient(uri, { useNewUrlParser: true,
+useUnifiedTopology: true });
+ try {
+ // Connect to the MongoDB cluster
+ await client.connect();
+ // Read student data from the user
+ const studentData = readStudentData();
+ // Insert student data into MongoDB
+ await insertStudentData(client, studentData);
+ } catch (error) {
+ console.error('Error connecting to MongoDB or performing operations:', error);
+ } finally {
+ // Close the connection to MongoDB
+ await client.close();
+ }
+}
+main().catch(console.error);
+
+OUTPUT:
+Enter USN: 12345
+Enter Name: John Doe
+Enter Semester: 6
+Enter Year of Admission: 2020
+New student inserted with ID: 60c5eec88b0a8b1df8c2b9d1
+
+
+4b
+
+Step 1: Set Up the Node.js Project
+Create a new directory for your project and initialize it with npm:
+
+mkdir student-app
+cd student-app
+npm init -y
+
+Install the necessary dependencies:
+npm install express mongoose body-parser
+
+Step 2: Set Up MongoDB
+Ensure you have MongoDB installed and running. You can either use a local
+instance or a cloud instance like MongoDB Atlas.
+
+Step 3: Create the Mongoose Model
+Create a file named models/Student.js and define the Mongoose schema for the
+student:
+
+const mongoose = require('mongoose');
+const studentSchema = new mongoose.Schema({
+ usn: { type: String, required: true, unique: true },
+ name: { type: String, required: true },
+ sem: { type: Number, required: true },
+ year_of_admission: { type: Number, required: true }
+});
+const Student = mongoose.model('Student', studentSchema);
+module.exports = Student;
+
+Step 4: Create the Express Server
+Create a file named server.js and set up the Express server along with the
+MongoDB connection:
+
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const Student = require('./models/Student');
+const app = express();
+const port = 3000;
+app.use(bodyParser.json());
+mongoose.connect('mongodb://localhost:27017/studentdb', {
+ useNewUrlParser: true,
+ useUnifiedTopology: true,
+ useCreateIndex: true
+});
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () => {
+ console.log('Connected to MongoDB');
+});
+// Route to add a new student
+app.post('/addStudent', async (req, res) => {
+ try {
+ const student = new Student(req.body);
+ await student.save();
+ res.status(201).send(student);
+ } catch (error) {
+ res.status(400).send(error);
+ }
+});
+// Route to search students by partial name
+app.get('/searchStudents/:name', async (req, res) => {
+ try {
+ const regex = new RegExp(req.params.name, 'i'); // 'i' makes it caseinsensitive
+ const students = await Student.find({ name: regex });
+ res.status(200).send(students);
+ } catch (error) {
+ res.status(400).send(error);
+ }
+});
+app.listen(port, () => {
+ console.log(`Server is running on http://localhost:${port}`);
+});
+
+Step 5: Test the API
+Start the server:
+node server.js
+
+Use a tool like Postman or curl to test the endpoints.
+To add a new student:
+curl -X POST http://localhost:3000/addStudent \
+-H "Content-Type: application/json" \
+-d '{
+ "usn": "1BM18CS001",
+ "name": "John Doe",
+ "sem": 5,
+ "year_of_admission": 2018
+}'
+
+To search for students by partial name:
+curl http://localhost:3000/searchStudents/John

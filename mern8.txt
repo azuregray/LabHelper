@@ -1,0 +1,73 @@
+8)
+Step 1: Set Up the Node.js Server with Express 
+First, make sure you have Node.js and Express installed. If not, you can install 
+Express using npm: 
+mkdir number-app 
+cd number-app 
+npm init -y 
+npm install express 
+
+
+Step 2: Create the Server and Routes 
+Create a file named server.js and set up the Express server with the required 
+routes. 
+const express = require('express'); 
+const app = express(); 
+const port = 3000; 
+// Function to find prime numbers less than 100 
+function findPrimesLessThan100() { 
+const primes = []; 
+for (let i = 2; i < 100; i++) { 
+let isPrime = true; 
+for (let j = 2; j <= Math.sqrt(i); j++) { 
+if (i % j === 0) { 
+isPrime = false; 
+break; 
+} 
+} 
+if (isPrime) { 
+primes.push(i); 
+} 
+} 
+return primes; 
+} 
+// Function to find cubes less than 100 
+function findCubesLessThan100() { 
+const cubes = []; 
+for (let i = 1; i ** 3 < 100; i++) { 
+cubes.push(i ** 3); 
+} 
+return cubes; 
+} 
+// Route to get prime numbers less than 100 
+app.get('/find_prime_100', (req, res) => { 
+const primes = findPrimesLessThan100(); 
+res.json({ primes }); 
+}); 
+// Route to get cubes less than 100 
+app.get('/find_cube_100', (req, res) => { 
+const cubes = findCubesLessThan100(); 
+res.json({ cubes }); 
+}); 
+app.listen(port, () => { 
+console.log(`Server is running on http://localhost:${port}`); 
+}); 
+
+
+Step 3: Run the Server 
+Start the server by running the following command: 
+node server.js 
+get 
+
+
+Step 4: Access the Routes 
+Open your web browser or use a tool like curl or Postman to access the routes: 
+To 
+prime 
+numbers 
+less 
+than 
+100, 
+go 
+http://localhost:3000/find_prime_100. 
+To get cubes less than 100, go to http://localhost:3000/find_cube_100. 
