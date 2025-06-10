@@ -1,4 +1,4 @@
-# **L A B &emsp; R E M O T E &emsp; A C C E S S**
+# **L A B &emsp; A S S I S T &emsp; C L I**
 
 > Author :: **`D A R S H A N  S (GitHub/azuregray)`**
 
